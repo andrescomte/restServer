@@ -39,13 +39,13 @@ const userPost = async(req,res=response) =>{
 }
 const userDelete = async(req,res=response) =>{
     const {id} = req.params;
-    //fisicamente lo borramos
+
+    // const uid = req.uid
 
     //const usuario = await Usuario.findByIdAndDelete(id);
     const usuario = await Usuario.findByIdAndUpdate(id,{estado : false})
     res.json({
-        id,
-        msg: "Delete API - Controller"
+        usuario
     })
 }
 const userPut = async(req,res=response) =>{
