@@ -33,8 +33,6 @@ const tieneRol = (...roles) =>{
             })
 
         }
-        console.log(roles,req.userAuth.rol)
-
         next();
     }
 
